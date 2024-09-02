@@ -3,7 +3,7 @@ import { ITableProps } from '@/interfaces/table';
 import React from 'react';
 
 
-const Table: React.FC<ITableProps> = (props:ITableProps) => {
+const Table: React.FC<ITableProps> = (props: ITableProps) => {
   return (
     <div className={`overflow-x-auto  ${props?.className}`}>
       <table className={`min-w-full divide-y divide-gray-200`}>
@@ -23,12 +23,10 @@ const Table: React.FC<ITableProps> = (props:ITableProps) => {
           {props?.data?.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {props?.columns.map((col) => (
-                <td
-                  key={col.accessor}
-                  className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                >
-                  {row[col?.accessor]}
+                <td key={col.accessor} className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                  {row[col.accessor as keyof typeof row]}
                 </td>
+
               ))}
             </tr>
           ))}

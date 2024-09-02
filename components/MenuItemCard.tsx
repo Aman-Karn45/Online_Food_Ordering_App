@@ -18,7 +18,8 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({ item }) => {
     setTimeout(() => setToastMessage(null), 3000);
   };
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     addToCart(item);
     showToast();
   };

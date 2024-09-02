@@ -98,7 +98,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-gray-800 py-8 text-center text-white">
-        <p>&copy; 2024 Foodie. All rights reserved.</p>
+        <p>&copy; 2024 Aman. All rights reserved.</p>
       </footer>
     </div>
   );

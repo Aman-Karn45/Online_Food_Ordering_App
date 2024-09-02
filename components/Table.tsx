@@ -27,7 +27,7 @@ const Table: React.FC<ITableProps> = (props:ITableProps) => {
                   key={col.accessor}
                   className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                 >
-                  {row[col.accessor]}
+                  {row[col?.accessor]}
                 </td>
               ))}
             </tr>
